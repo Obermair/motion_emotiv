@@ -1,6 +1,5 @@
 const Cortex = require('./cortex');
 const robot = require("robotjs");
-const { width, height } = require("screenz");
 
 var express = require('express');
 const app = express();
@@ -8,7 +7,6 @@ var path = require('path');
 const server = require('http').createServer(app)
 const io = require('socket.io').listen(server)
 const Motion = require('./motion.schema')
-var Quaternion = require('quaternion');
 
 let motionData = new Motion(0,0,0,0)
 

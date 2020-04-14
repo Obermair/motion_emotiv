@@ -1,0 +1,27 @@
+{
+  "name": "motion_emotiv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mouse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Obermair/motion_emotiv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Obermair/motion_emotiv/issues"
+  },
+  "homepage": "https://github.com/Obermair/motion_emotiv#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "robotjs": "^0.6.0",
+    "socket.io": "^2.3.0",
+    "ws": "^7.2.3"
+  }
+}
