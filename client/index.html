@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Data</title>
+    <script src="socket.io/socket.io.js"></script>
+</head>
+<body>
+    w = <span id="qw">undefined</span><br>
+    x = <span id="qx">undefined</span><br>
+    y = <span id="qy">undefined</span><br>
+    z = <span id="qz">undefined</span><br><br><br><br>
+
+    accX = <span id="accx">undefined</span><br>
+    accY = <span id="accy">undefined</span><br>
+    accZ = <span id="accz">undefined</span><br>
+
+</body>
+<script>
+    var socket = io.connect()
+
+    socket.on('sendData', function(data){
+        motion = JSON.parse(data)
+        
+        document.getElementById("qw").innerHTML = motion.qw
+        document.getElementById("qx").innerHTML = motion.qx
+        document.getElementById("qy").innerHTML = motion.qy
+        document.getElementById("qz").innerHTML = motion.qz
+        document.getElementById("accx").innerHTML = motion.accx
+        document.getElementById("accy").innerHTML = motion.accy
+        document.getElementById("accz").innerHTML = motion.accz
+    })
+
+</script>
+</html>
